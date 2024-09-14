@@ -1,4 +1,5 @@
-package com.example.library.service;
+
+package com.example.library.Application.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,19 +7,26 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.library.model.Book;
-import com.example.library.repository.BookRepository;
+import com.example.library.Domain.Book;
+import com.example.library.Infrastructure.repository.BookRepository;
+
 
 @Service
+// Contais bussines logic.
+// Between contoller and repository.
+// Behid a JPA method there is a query (JPA dependency)
+// CRUD type operations
 public class BookService {
 
-    @Autowired
+    @Autowired //Injection dependecy
     private BookRepository bookRepository;
 
+    //UPDATE / CREATE query
     public Book saveBook(Book book) {
         return bookRepository.save(book);
     }
 
+    // DELETE query
     public void deleteBookById(Long id) {
         if (bookRepository.existsById(id)) {
             bookRepository.deleteById(id);
@@ -27,12 +35,12 @@ public class BookService {
         }
     }
 
-    // Get all books from the repository
+    // GET query
     public List<Book> getAllBooks() {
         return bookRepository.findAll();
     }
 
-    // Get a specific book by ID
+    // GET query
     public Optional<Book> getBookById(Long id) {
         return bookRepository.findById(id);
     }

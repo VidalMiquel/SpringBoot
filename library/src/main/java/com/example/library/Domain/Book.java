@@ -1,11 +1,12 @@
-package com.example.library.model;
+package com.example.library.Domain;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-@Entity
+
+@Entity //Annotation used to identify database structure
 public class Book {
 
     @Id
@@ -26,7 +27,8 @@ public class Book {
         this.isbn = isbn;
     }
 
-    // Getters and Setters
+    // Getters and Setters 
+    // Each getter is a column in the table "Book"
     public Long getId() {
         return id;
     }

@@ -1,4 +1,4 @@
-package com.example.library;
+package com.example.library.Presentation.Controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -12,14 +12,16 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.library.model.Book;
-import com.example.library.service.BookService;
+import com.example.library.Application.service.BookService; //map a rquestbook (BIEL)
+import com.example.library.Domain.Book;
 
+// Type controller --> serve data to client in JSON/XML format
 @RestController
+//Used to map HTTP requests --> http://localhost:8080/books
 @RequestMapping("/books")
 public class BookController {
 
-    @Autowired
+    @Autowired //Depency injection
     private BookService bookService;
 
     // POST request to add a new book
