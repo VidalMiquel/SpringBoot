@@ -17,8 +17,8 @@ Projects:
 
 - demo
     - Goal: introduce controller and service concept. Get and Post operations.
-    - Java version: 22
+    - Java version: 17
 
 - library 
     - Goal: Work with CRUD operations
-    - Java version: 22
+    - Java version: 17
