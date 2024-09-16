@@ -7,4 +7,18 @@ For now, I'm using the Spring Boot Initializr (https://start.spring.io/) and cre
 
 The current dependency applied is "Spring Web." We are connected to an endpoint, launching some POST, GET and DELETE requests.
 
- Moreover, we have defined an hexagonal system folder using the following layers: Presentation, Infrastrucutre, Application and Domain.
+Moreover, we have defined an hexagonal system folder using the following layers: Presentation (Controllers), Infrastrucutre (Services), Application (Repositories) and Domain (Entities).
+
+Projects:
+
+- helloWorld 
+    - Goal: helloWorld program to introduce to SpringBoot.
+    - Java version: 17
+
+- demo
+    - Goal: introduce controller and service concept. Get and Post operations.
+    - Java version: 22
+
+- library 
+    - Goal: Work with CRUD operations
+    - Java version: 22
