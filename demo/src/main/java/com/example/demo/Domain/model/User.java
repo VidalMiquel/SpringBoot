@@ -1,4 +1,4 @@
-package com.example.demo.model;
+package com.example.demo.Domain.model;
 
 public class User {
     private Long id;
