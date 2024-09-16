@@ -17,7 +17,8 @@ import com.example.library.Domain.Book;
 
 // Type controller --> serve data to client in JSON/XML format
 @RestController
-//Used to map HTTP requests --> http://localhost:8080/books
+//Used to map HTTP requests --> http://localhost:8080/books 
+//Defines a base URL
 @RequestMapping("/books")
 public class BookController {
 
@@ -31,6 +32,7 @@ public class BookController {
     }
 
     // DELETE request to delete a book by its ID
+    // Defines a specific URL --> http://localhost:8080/books/id 
     @DeleteMapping("/{id}")
     public String deleteBook(@PathVariable Long id) {
         try {
@@ -42,12 +44,14 @@ public class BookController {
     }
 
     // GET request to retrieve all books
+    // NO defines a specific URL
     @GetMapping
     public List<Book> getAllBooks() {
         return bookService.getAllBooks();
     }
 
     // GET request to retrieve a book by its ID
+    // Defines a specific URL --> http://localhost:8080/books/id
     @GetMapping("/{id}")
     public Optional<Book> getBookById(@PathVariable Long id) {
         return bookService.getBookById(id);
