@@ -1,5 +1,5 @@
 # SpringBoot
-Introduction to the Spring Boot Project.
+Introduction to Spring Boot.
 
 This project has no other goal than to test the framework and become familiar with it. It will be an incremental project.
 
@@ -20,5 +20,5 @@ Projects:
     - Java version: 17
 
 - library 
-    - Goal: Work with CRUD operations
+    - Goal: Work with CRUD operations and Mapper.
     - Java version: 17
