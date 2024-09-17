@@ -6,9 +6,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.example.library.Application.BookMapper;
 import com.example.library.Domain.Book;
 import com.example.library.Domain.BookDTO;
-import com.example.library.Domain.BookMapper;
 import com.example.library.Infrastructure.repository.BookRepository;
 
 
@@ -46,8 +46,9 @@ public class BookService {
     }
 
     // GET query
-    public List<Book> getAllBooks() {
-        return bookRepository.findAll();
+    public List<BookDTO> getAllBooks() {
+        List<Book> books = bookRepository.findAll();
+        return bookMapper.toDTOList(books);
     }
 
     
@@ -58,6 +59,6 @@ public class BookService {
 
     public BookDTO getBookById(Long id) {
         Book book = bookRepository.findById(id).orElseThrow(() -> new RuntimeException("Book not found"));
-        return bookMapper.bookTOBookDTO(book);
+        return bookMapper.bookToBookDTO(book);
     }
 }

@@ -14,8 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.library.Application.service.BookService;
-import com.example.library.Domain.Book; //map a rquestbook (BIEL)
-import com.example.library.Domain.BookDTO;
+import com.example.library.Domain.BookDTO; //map a rquestbook (BIEL)
 
 // Type controller --> serve data to client in JSON/XML format
 @RestController
@@ -63,7 +62,7 @@ public class BookController {
     // GET request to retrieve all books
     // NO defines a specific URL
     @GetMapping
-    public List<Book> getAllBooks() {
+    public List<BookDTO> getAllBooks() {
         return bookService.getAllBooks();
     }
 
