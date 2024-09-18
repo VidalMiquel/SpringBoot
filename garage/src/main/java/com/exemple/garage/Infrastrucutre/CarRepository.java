@@ -10,4 +10,5 @@ import com.exemple.garage.Domain.Car;
 @Repository
 public interface CarRepository extends JpaRepository<Car, Long> {
     // Aquí puedes agregar métodos personalizados si es necesario
+    boolean  deleteByBrand(String color);
 }

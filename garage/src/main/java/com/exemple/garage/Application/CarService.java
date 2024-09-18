@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.exemple.garage.Domain.Car;
 import  com.exemple.garage.Domain.CarDTO;
@@ -50,5 +51,10 @@ public class CarService {
             return true;
         }
         return false;
+    }
+
+    @Transactional
+    public void  deleteByBrand(String brand) {
+        carRepository.deleteByBrand(brand);
     }
 }

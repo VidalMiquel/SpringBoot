@@ -64,4 +64,11 @@ public class CarController {
         }
     }
 
+    @DeleteMapping("/brand/{brand}")
+    public ResponseEntity<String> deleteCarsByBrand(@PathVariable String brand) {
+        carService.deleteByBrand(brand);
+        return ResponseEntity.ok("Cars deleted successfully.");
+    }
+
+
 }
