@@ -1,3 +1,4 @@
+**Project requirements**
 Develop a Java Spring Boot project (you can use https://start.spring.io/) that has an endpoint “concatenate” which is a POST that can accept 2 Strings as parameters in the URL (query parameters) and whose response is a String with these 2 parameters concatenated. That is, if we POST to https://localhost:8080/api/concatenate?left=abc&right=def, the response should be abcdef or a JSON that contains "abcdef" (for example, { "result": "abcdef" }).
 When you have created this endpoint, you should demonstrate that you can call it, for example, using Postman, and show that it works.
 
