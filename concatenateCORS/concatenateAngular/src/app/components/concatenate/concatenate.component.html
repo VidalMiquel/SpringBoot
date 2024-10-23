@@ -1,0 +1,9 @@
+<div>
+  <h2>Concatenate Words</h2>
+  <input [(ngModel)]="leftWord" placeholder="Enter first word" />
+  <input [(ngModel)]="rightWord" placeholder="Enter second word" />
+  <button (click)="concatenateWords()">Concatenate</button>
+
+  <h3>Result:</h3>
+  <textarea [value]="result" readonly></textarea>
+</div>
