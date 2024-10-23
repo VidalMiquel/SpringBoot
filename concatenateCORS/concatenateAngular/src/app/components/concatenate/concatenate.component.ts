@@ -1,0 +1,26 @@
+import { Component } from '@angular/core';
+import { ConcatenateService } from '../../service/concatenateService';
+
+@Component({
+  selector: 'app-concatenate',
+  templateUrl: './concatenate.component.html',
+})
+export class ConcatenateComponent {
+  leftWord: string = '';
+  rightWord: string = '';
+  result: string = '';
+
+  constructor(private concatenateService: ConcatenateService) {}
+
+  concatenateWords() {
+    this.concatenateService.concatenate(this.leftWord, this.rightWord).subscribe(
+      (response) => {
+        this.result = response;
+        console.log(response);
+      },
+      (error) => {
+        console.error('Error concatenating words', error);
+      }
+    );
+  }
+}
