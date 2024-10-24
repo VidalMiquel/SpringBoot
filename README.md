@@ -1,24 +1,30 @@
 # SpringBoot
-Introduction to Spring Boot.
+Introduction to Spring Boot framework.
 
-This project has no other goal than to test the framework and become familiar with it. It will be an incremental project.
-
-For now, I'm using the Spring Boot Initializr (https://start.spring.io/) and creating a guide for reference.
-
-The current dependency applied is "Spring Web." We are connected to an endpoint, launching some POST, GET and DELETE requests.
-
-Moreover, we have defined an hexagonal system folder using the following layers: Presentation (Controllers), Infrastrucutre (Services), Application (Repositories) and Domain (Entities).
+This repository has no other goal than to test the framework and become familiar with it.
 
 Projects:
 
 - helloWorld 
-    - Goal: helloWorld program to introduce to SpringBoot.
+    - Goal: Introductory "HelloWorld" program to SpringBoot.
     - Java version: 17
 
 - demo
-    - Goal: introduce controller and service concept. Get and Post operations.
+    - Goal: Introduce controller and service concept. Get and Post operations.
     - Java version: 17
 
 - library 
     - Goal: Work with CRUD operations and Mapper.
+    - Java version: 17
+
+- garage 
+    - Goal: Work with CRUD operations and Mapper.
+    - Java version: 17
+
+ - uppercaseCORS
+    - Goal: Introduce CORS functionality to link the front-end (Angular) with the back-end (Spring Boot) project, focusing on converting a specified word to uppercase.
+    - Java version: 17
+
+- concatenateCORS 
+    - Goal: Use CORS to connect the front-end (Angular) with the back-end (Spring Boot) project, concatenating two words introduced by inputs.
     - Java version: 17
