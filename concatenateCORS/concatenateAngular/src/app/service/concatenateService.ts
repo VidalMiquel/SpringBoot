@@ -12,6 +12,7 @@ export class ConcatenateService {
   constructor(private http: HttpClient) { }
 
   concatenate(left: string, right: string): Observable<string> {
-    return this.http.post<string>(`${this.apiUrl}?left=${left}&right=${right}`, {});
+    // Send request with query parameters
+    return this.http.get(`${this.apiUrl}?left=${left}&right=${right}`,{responseType: 'text'});
   }
 }
